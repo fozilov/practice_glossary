@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Request reason:</strong>
+  <%= @request.request_reason %>
+</p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @request.requester %>
+</p>
+
+<p>
+  <strong>Decision reason:</strong>
+  <%= @request.decision_reason %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
