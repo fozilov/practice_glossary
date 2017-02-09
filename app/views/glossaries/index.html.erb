@@ -1,34 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Glossaries</h1>
+<h3 class="mdl-layout-drawer mdl-layout-title">用語集</h3><p>
 
-<table>
+
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>External use</th>
-      <th>English name</th>
-      <th>Description</th>
-      <th>Development name</th>
-      <th>Status</th>
-      <th colspan="3"></th>
+      <th class="mdl-data-table__cell--non-numeric">名称</th>
+      <th class="mdl-data-table__cell--non-numeric">外部使用</th>
+      <th class="mdl-data-table__cell--non-numeric">英語名</th>
+      <th class="mdl-data-table__cell--non-numeric">説明</th>
+      <th class="mdl-data-table__cell--non-numeric">開発名</th>
+      <th class="mdl-data-table__cell--non-numeric">更新日</th>
+      <th class="mdl-data-table__cell--non-numeric">状態</th>
+      <th class="mdl-data-table__cell--non-numeric">Action</th>
     </tr>
   </thead>
 
   <tbody>
     <% @glossaries.each do |glossary| %>
+
+      <style>
+      .demo-list-three {
+        width: 650px;
+      }
+      </style>
+
       <tr>
-        <td><%= glossary.name %></td>
-        <td><%= glossary.external_use %></td>
-        <td><%= glossary.english_name %></td>
-        <td><%= glossary.description %></td>
-        <td><%= glossary.development_name %></td>
-        <td><%= glossary.status %></td>
-        <td><%= link_to 'Show', glossary %></td>
-        <td><%= link_to 'Edit', edit_glossary_path(glossary) %></td>
-        <td><%= link_to 'Destroy', glossary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="mdl-data-table__cell--non-numeric"><%= glossary.name %></td>
+        <td class="mdl-data-table__cell--non-numeric"><%= glossary.external_use %></td>
+        <td class="mdl-data-table__cell--non-numeric"><%= glossary.english_name %></td>
+        <td class="mdl-data-table__cell--non-numeric"><%= glossary.description %></td>
+        <td class="mdl-data-table__cell--non-numeric"><%= glossary.development_name %></td>
+        <td class="mdl-data-table__cell--non-numeric"><%= glossary.updated_at %></td>
+        <td class="mdl-data-table__cell--non-numeric"><%= glossary.status %></td>
+
+        <td>
+          <button id="demo-menu-lower-right"
+                  class="mdl-button mdl-js-button mdl-button--icon">
+              <i class="material-icons">more_vert</i>
+          </button>
+
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+              for="demo-menu-lower-right">
+              <li class="mdl-menu__item"><%= link_to '変更依頼', edit_glossary_path(glossary) %></li>
+          </ul>
+        </td>
       </tr>
     <% end %>
+
   </tbody>
 </table>
 
