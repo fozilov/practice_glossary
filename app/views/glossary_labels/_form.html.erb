@@ -1,0 +1,17 @@
+<%= form_for(glossary_label) do |f| %>
+  <% if glossary_label.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(glossary_label.errors.count, "error") %> prohibited this glossary_label from being saved:</h2>
+
+      <ul>
+      <% glossary_label.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

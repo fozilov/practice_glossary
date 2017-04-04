@@ -1,17 +1,15 @@
-<%= form_for(glossary) do |f| %>
-  <% if glossary.errors.any? %>
+<%= form_for(glossary_request) do |f| %>
+  <% if glossary_request.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(glossary.errors.count, "error") %> prohibited this glossary from being saved:</h2>
+      <h2><%= pluralize(glossary_request.errors.count, "error") %> prohibited this glossary_request from being saved:</h2>
 
       <ul>
-      <% glossary.errors.full_messages.each do |message| %>
+      <% glossary_request.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-
 
   <div class="field">
     <%= f.label '名称' %>
@@ -38,8 +36,22 @@
     <%= f.text_field :development_name %>
   </div>
 
+  <div class="field">
+    <%= f.label '依頼者'%>
+    <%= f.text_field :requester %>
+  </div>
+
+  <div class="field">
+    <%= f.label '依頼理由'%>
+    <%= f.text_field :request_reason %>
+  </div>
+
+  <div class="field">
+    <%= f.label '判断理由'%>
+    <%= f.text_field :decision_reason %>
+  </div>
 
   <div class="actions">
-    <%= f.submit 'OK'%>
+    <%= f.submit %>
   </div>
 <% end %>

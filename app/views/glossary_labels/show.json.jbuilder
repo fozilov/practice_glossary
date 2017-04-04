@@ -1,0 +1,1 @@
+json.partial! "glossary_labels/glossary_label", glossary_label: @glossary_label

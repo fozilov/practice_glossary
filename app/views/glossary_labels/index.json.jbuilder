@@ -1,0 +1,1 @@
+json.array! @glossary_labels, partial: 'glossary_labels/glossary_label', as: :glossary_label

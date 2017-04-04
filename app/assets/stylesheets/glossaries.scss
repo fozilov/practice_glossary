@@ -1,3 +1,102 @@
 // Place all the styles related to the glossaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "UTF-8";
+
+$font-stack: Helvetica, sans-serif;
+
+
+table {
+  table-layout:fixed;
+  border-collapse: collapse;
+  width: 1000px;
+}
+
+tr {
+  height: 20px;
+  font-size: 5px;
+}
+
+td, th {
+  height: 35px;
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 11px
+}
+
+th {
+    background-color: #4f1F00;
+    color: white;
+    width: 1px;
+}
+
+.td-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  width: 100px;
+}
+
+.td-external {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  width: 44px;
+}
+
+.td-english {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  width: 100px;
+}
+
+.td-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+}
+
+.td-development {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  width: 100px;
+}
+
+.td-date {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  width: 70px;
+}
+
+.td-status {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  width: 30px;
+}
+
+.td-action {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  width: 40px;
+}
+
+
+
+
+
+tr:nth-child(even) {background-color: #f2f2f2}

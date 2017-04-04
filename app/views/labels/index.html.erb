@@ -1,27 +1,33 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE HTML>
+<html>
 
-<h1>Labels</h1>
+  <head>
+  </head>
 
-<table>
-  <thead>
-    <tr>
-      <th>Label name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <body>
 
-  <tbody>
-    <% @labels.each do |label| %>
-      <tr>
-        <td><%= label.label_name %></td>
-        <td><%= link_to 'Show', label %></td>
-        <td><%= link_to 'Edit', edit_label_path(label) %></td>
-        <td><%= link_to 'Destroy', label, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <p id="notice"><%= notice %></p>
 
-<br>
+    <h1>ラベル一覧</h1>
 
-<%= link_to 'New Label', new_label_path %>
+    <table>
+      <thead>
+        <tr>
+          <th>ラベル名</th>
+          <th>追加日</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @labels.each do |label| %>
+          <tr>
+            <td><%= label.label_name %></td>
+            <td><%= label.updated_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+  </body>

@@ -1,0 +1,1 @@
+json.array! @label_requests, partial: 'label_requests/label_request', as: :label_request

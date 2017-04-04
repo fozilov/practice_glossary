@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Glossary Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>名称</th>
+      <th>外部使用</th>
+      <th>英語名</th>
+      <th>説明</th>
+      <th>開発名</th>
+      <th>更新日</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @glossary_requests.each do |glossary_request| %>
+      <tr>
+
+        <td class="td-name"><%= glossary_request.name %></td>
+        <td class="td-external"><%= glossary_request.external_use %></td>
+        <td class="td-english"><%= glossary_request.english_name %></td>
+        <td class="td-description"><%= glossary_request.description %></td>
+        <td class="td-development"><%= glossary_request.development_name %></td>
+        <td class="td-date"><%= glossary_request.updated_at %></td>
+        <td class="td-action"><%= link_to 'Show', glossary_request %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Glossary Request', new_glossary_request_path %>
