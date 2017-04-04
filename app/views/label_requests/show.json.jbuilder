@@ -1,0 +1,1 @@
+json.partial! "label_requests/label_request", label_request: @label_request

@@ -1,0 +1,1 @@
+json.array! @glossary_requests, partial: 'glossary_requests/glossary_request', as: :glossary_request

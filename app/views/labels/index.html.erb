@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+  </head>
+
+  <body>
+
+    <p id="notice"><%= notice %></p>
+
+    <h1>ラベル一覧</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ラベル名</th>
+          <th>追加日</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @labels.each do |label| %>
+          <tr>
+            <td><%= label.label_name %></td>
+            <td><%= label.updated_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+  </body>

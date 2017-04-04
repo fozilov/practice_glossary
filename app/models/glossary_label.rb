@@ -1,0 +1,2 @@
+class GlossaryLabel < ApplicationRecord
+end

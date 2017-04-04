@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @glossary.name %>
+</p>
+
+<p>
+  <strong>External use:</strong>
+  <%= @glossary.external_use %>
+</p>
+
+<p>
+  <strong>English name:</strong>
+  <%= @glossary.english_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @glossary.description %>
+</p>
+
+<p>
+  <strong>Development name:</strong>
+  <%= @glossary.development_name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @glossary.status %>
+</p>
+
+<%= link_to 'Edit', edit_glossary_path(@glossary) %> |
+<%= link_to 'Back', glossaries_path %>

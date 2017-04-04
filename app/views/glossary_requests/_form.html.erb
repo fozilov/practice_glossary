@@ -1,0 +1,57 @@
+<%= form_for(glossary_request) do |f| %>
+  <% if glossary_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(glossary_request.errors.count, "error") %> prohibited this glossary_request from being saved:</h2>
+
+      <ul>
+      <% glossary_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label '名称' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label '外部使用' %>
+    <%= f.check_box :external_use %>
+  </div>
+
+  <div class="field">
+    <%= f.label '英語名' %>
+    <%= f.text_field :english_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label '概要' %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label '開発名称' %>
+    <%= f.text_field :development_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label '依頼者'%>
+    <%= f.text_field :requester %>
+  </div>
+
+  <div class="field">
+    <%= f.label '依頼理由'%>
+    <%= f.text_field :request_reason %>
+  </div>
+
+  <div class="field">
+    <%= f.label '判断理由'%>
+    <%= f.text_field :decision_reason %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

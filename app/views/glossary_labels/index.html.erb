@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Glossary Labels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @glossary_labels.each do |glossary_label| %>
+      <tr>
+        <td><%= link_to 'Show', glossary_label %></td>
+        <td><%= link_to 'Edit', edit_glossary_label_path(glossary_label) %></td>
+        <td><%= link_to 'Destroy', glossary_label, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Glossary Label', new_glossary_label_path %>

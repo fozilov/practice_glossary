@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+  </head>
+
+  <body>
+    <p id="notice"><%= notice %></p>
+    <h3>用語集</h3>
+    <p>
+
+
+
+    <div style="overflow-x:auto;">
+      <table>
+        <col style="width:32px">
+        <col style="width:6px">
+        <col style="width:20px">
+        <col style="width:60px">
+        <col style="width:15px">
+        <col style="width:12px">
+        <col style="width:8px">
+        <col style="width:8px">
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>外部使用</th>
+            <th>英語名</th>
+            <th>説明</th>
+            <th>開発名</th>
+            <th>更新日</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+
+        <tbody>
+          <% @glossaries.each do |glossary| %>
+            <tr>
+
+              <td class="td-name"><%= glossary.name %></td>
+              <td class="td-external"><%= if glossary.external_use == true then external_use_display = "Yes" else external_use_display = "X" end %></td>
+              <td class="td-english"><%= glossary.english_name %></td>
+              <td class="td-description"><%= glossary.description %></td>
+              <td class="td-development"><%= glossary.development_name %></td>
+              <td class="td-date"><%= glossary.updated_at %></td>
+              <td class="td-action"><%= link_to '変更依頼', edit_glossary_path(glossary) %></td>
+
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+
+    <div>
+      <%= link_to '新規用語を追加', new_glossary_path %>
+    </div>
+    <p>
+    <div class="text-align:right">
+      <a href="/labels#index">ラベル一覧</a>
+    </div>
+
+  </body>
+
+</html>

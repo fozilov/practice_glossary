@@ -1,0 +1,1 @@
+json.partial! "glossary_requests/glossary_request", glossary_request: @glossary_request
