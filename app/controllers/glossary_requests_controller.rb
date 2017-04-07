@@ -24,8 +24,8 @@ class GlossaryRequestsController < ApplicationController
   # POST /glossary_requests
   # POST /glossary_requests.json
   def create
-    unlocked_glossary_request_params = ActiveSupport::HashWithIndifferentAccess.new(glossary_request_params)
-    @glossary_request = GlossaryRequest.new(unlocked_glossary_request_params)
+    #unlocked_glossary_request_params = ActiveSupport::HashWithIndifferentAccess.new(glossary_request_params)
+    @glossary_request = GlossaryRequest.new(glossary_request_params)
 
     respond_to do |format|
       if @glossary_request.save
